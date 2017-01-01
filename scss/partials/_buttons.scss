@@ -1,0 +1,87 @@
+.btn {
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      outline: 0 none;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    outline: 0 none;
+  }
+}
+
+@mixin button-variant-inline($color, $background, $border) {
+
+  @if $background == transparent {
+    $background: #FFF;
+  }
+
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  @include transition($transition-base);
+
+  &:focus,
+  &.focus {
+    color: $background;
+    background-color: darken($color, 10%);
+    border-color: darken($color, 25%);
+  }
+  &:hover {
+    color: $background;
+    background-color: darken($color, 10%);
+    border-color: darken($color, 12%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $background;
+    background-color: darken($color, 10%);
+    border-color: darken($color, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $background;
+      background-color: darken($color, 17%);
+      border-color: darken($color, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $color;
+      border-color: $color;
+    }
+  }
+
+  .badge {
+    color: $color;
+    background-color: $background;
+  }
+}
+
+.btn-primary-inline {
+  @include button-variant-inline($color, transparent, transparent);
+}
+
+.btn-primary-outline {
+  @include button-variant-inline($color, transparent, $color);
+}
+
+.btn-rounded {
+
+}

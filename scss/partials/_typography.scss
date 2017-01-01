@@ -1,0 +1,45 @@
+a {
+  color: inherit;
+  @include transition(color 0.3s ease);
+  &:hover, &:focus {
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+}
+
+.img-bg {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.title-style {
+}
+
+.text-faded {
+  color: #aaaaaa;
+}
+
+.ellipses {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bg-facebook {
+  background-color: $bg-facebook;
+}
+
+.bg-twitter {
+  background-color: $bg-twitter;
+}
+
+.bg-google {
+  background-color: $bg-google;
+}

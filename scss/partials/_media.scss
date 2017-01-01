@@ -1,0 +1,39 @@
+.media-flex {
+  @include flexbox;
+}
+
+.media-flex-left,
+.media-flex-body,
+.media-flex-right {
+  @include flex(1);
+}
+
+.media-center {
+  display: table;
+  .media-center-left,
+  .media-center-body,
+  .media-center-right {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .media-center-left {
+    padding-right: 10px;
+  }
+  .media-center-body {
+    display: table-cell;
+    width: 2000px;
+  }
+  .media-center-right {
+    padding-left: 10px;
+  }
+  .media-center-heading {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .media-center-p {
+    font-size: 14px;
+    color: $light-slate;
+    margin-bottom: 0;
+  }
+}

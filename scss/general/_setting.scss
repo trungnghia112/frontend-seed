@@ -1,0 +1,106 @@
+//
+// Setting font size
+// --------------------------------------------------
+$i_font: 30;
+@while $i_font > 8 {
+  .fz#{$i_font} {
+    font-size: $i_font * 1px !important;
+  }
+  $i_font: $i_font - 1;
+}
+
+//
+// Setting margin padding
+// --------------------------------------------------
+$i_marginpadding: 50;
+@while $i_marginpadding >= 0 {
+  .m#{$i_marginpadding} {
+    margin: $i_marginpadding * 1px !important;
+  }
+  .mt#{$i_marginpadding} {
+    margin-top: $i_marginpadding * 1px !important;
+  }
+  .mr#{$i_marginpadding} {
+    margin-right: $i_marginpadding * 1px !important;
+  }
+  .mb#{$i_marginpadding} {
+    margin-bottom: $i_marginpadding * 1px !important;
+  }
+  .ml#{$i_marginpadding} {
+    margin-left: $i_marginpadding * 1px !important;
+  }
+
+  .p#{$i_marginpadding} {
+    padding: $i_marginpadding * 1px !important;
+  }
+  .pt#{$i_marginpadding} {
+    padding-top: $i_marginpadding * 1px !important;
+  }
+  .pr#{$i_marginpadding} {
+    padding-right: $i_marginpadding * 1px !important;
+  }
+  .pb#{$i_marginpadding} {
+    padding-bottom: $i_marginpadding * 1px !important;
+  }
+  .pl#{$i_marginpadding} {
+    padding-left: $i_marginpadding * 1px !important;
+  }
+  $i_marginpadding: $i_marginpadding - 5;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  $i_marginpadding_sm: 50;
+  @while $i_marginpadding_sm >= 0 {
+    .m#{$i_marginpadding_sm}-sm {
+      margin: $i_marginpadding_sm * 1px !important;
+    }
+    .mt#{$i_marginpadding_sm}-sm {
+      margin-top: $i_marginpadding_sm * 1px !important;
+    }
+    .mr#{$i_marginpadding_sm}-sm {
+      margin-right: $i_marginpadding_sm * 1px !important;
+    }
+    .mb#{$i_marginpadding_sm}-sm {
+      margin-bottom: $i_marginpadding_sm * 1px !important;
+    }
+    .ml#{$i_marginpadding_sm}-sm {
+      margin-left: $i_marginpadding_sm * 1px !important;
+    }
+
+    .p#{$i_marginpadding_sm}-sm {
+      padding: $i_marginpadding_sm * 1px !important;
+    }
+    .pt#{$i_marginpadding_sm}-sm {
+      padding-top: $i_marginpadding_sm * 1px !important;
+    }
+    .pr#{$i_marginpadding_sm}-sm {
+      padding-right: $i_marginpadding_sm * 1px !important;
+    }
+    .pb#{$i_marginpadding_sm}-sm {
+      padding-bottom: $i_marginpadding_sm * 1px !important;
+    }
+    .pl#{$i_marginpadding_sm}-sm {
+      padding-left: $i_marginpadding_sm * 1px !important;
+    }
+    $i_marginpadding_sm: $i_marginpadding_sm - 5;
+  }
+}
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+@mixin make-grid-columns_custom($grid-gutter-width-custom,$i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    padding-left: ceil(($grid-gutter-width-custom / 2));
+    padding-right: floor(($grid-gutter-width-custom / 2));
+    margin-bottom: $grid-gutter-width-custom;
+  }
+}
+
+.row-16 {
+  @include make-row(16px);
+  @include make-grid-columns_custom(16px);
+}

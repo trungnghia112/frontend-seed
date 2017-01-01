@@ -1,0 +1,26 @@
+{
+  "name": "WebApp",
+  "homepage": "",
+  "description": "WebApp",
+  "main": "",
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "trungnghia112 <trungnghia112@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.3",
+    "bootstrap-sass": "~3.3.7",
+    "modernizr": "~2.8.3",
+    "jquery-placeholder": "mathiasbynens/jquery-placeholder#~2.1.3"
+  }
+}

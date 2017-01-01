@@ -1,0 +1,48 @@
+/*!--------------------------------------------------------------------------------
+
+    Theme Name: WebApp
+    Version:    1.0.0
+    Author:     trungnghia112 <trungnghia112@gmail.com>
+
+-----------------------------------------------------------------------------------*/
+//  Bootstrap
+//  Fonts
+//  Global
+//  Third party
+//  Layout
+//  Content
+//---------------------------------------------------------------------------------*/
+//
+// =Bootstrap
+// --------------------------------------------------
+@import "custom-bootstrap";
+//
+// =Fonts
+// --------------------------------------------------
+@import "partials/fonts";
+//
+// =Global
+// --------------------------------------------------
+@import "general/mixin";
+@import "general/setting";
+@import "partials/constants";
+@import "partials/colors";
+@import "partials/typography";
+@import "partials/forms";
+@import "partials/buttons";
+@import "partials/scrollbar-measure";
+@import "partials/modals";
+//
+// =Layout
+// --------------------------------------------------
+@import "layout/header";
+@import "layout/footer";
+@import "layout/content";
+//
+// =Third party
+// --------------------------------------------------
+//
+// =Content
+// --------------------------------------------------
+@import "pages/home";
+
